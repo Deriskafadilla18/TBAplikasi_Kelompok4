@@ -1,0 +1,53 @@
+@model IEnumerable<AplikasiPerpustakaan.Models.Borrow>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nama_peminjam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tanggal_pinjam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lama_pinjam)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nama_peminjam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tanggal_pinjam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_Book)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lama_pinjam)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Borrow">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Borrow">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Borrow">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

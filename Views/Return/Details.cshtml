@@ -1,0 +1,42 @@
+@model AplikasiPerpustakaan.Models.Return
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Return</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nama_pengembali)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nama_pengembali)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tanggal_pengembalian)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tanggal_pengembalian)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id_Borrow)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id_Borrow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ket)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ket)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Return">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

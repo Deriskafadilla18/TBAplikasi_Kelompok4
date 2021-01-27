@@ -1,0 +1,53 @@
+@model AplikasiPerpustakaan.Models.Author
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Author</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="penulis" class="control-label"></label>
+                <input asp-for="penulis" class="form-control" />
+                <span asp-validation-for="penulis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="umur" class="control-label"></label>
+                <input asp-for="umur" class="form-control" />
+                <span asp-validation-for="umur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="asal" class="control-label"></label>
+                <input asp-for="asal" class="form-control" />
+                <span asp-validation-for="asal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pena" class="control-label"></label>
+                <input asp-for="pena" class="form-control" />
+                <span asp-validation-for="pena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hobi" class="control-label"></label>
+                <input asp-for="hobi" class="form-control" />
+                <span asp-validation-for="hobi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

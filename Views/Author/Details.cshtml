@@ -1,0 +1,48 @@
+@model AplikasiPerpustakaan.Models.Author
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Author</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.penulis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.penulis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.umur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.umur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.asal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.asal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pena)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pena)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hobi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hobi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Author">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

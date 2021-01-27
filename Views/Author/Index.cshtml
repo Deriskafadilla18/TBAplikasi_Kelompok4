@@ -1,0 +1,59 @@
+@model IEnumerable<AplikasiPerpustakaan.Models.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.penulis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.umur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.asal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hobi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.penulis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.umur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hobi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Author">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Author">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Author">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
